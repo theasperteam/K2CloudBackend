@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height: 100%;
+    overflow-x : hidden;
+    background: rgb(22,22,22);
+    /* color: #DFDFDF; */
+}
+
+/* a{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+a:hover{
+    color : #ff5e11;
+    text-decoration: none;
+} */
+
+.landing {
+    background: url('../images/Images/lbw1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-blend-mode: overlay; */
+    /* linear-gradient(90deg, rgba(49,49,49,1) 40%, transparent 100%) */
+}
+
+.text-orangeGrad{
+    background: linear-gradient(-270deg, #FF834F 17.19%, #FF5E11 84.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.bg-orangeGrad{
+    background: linear-gradient(-270deg, #FF834F 17.19%, #FF5E11 84.9%);
+}
+
+.bg-darkGrad{
+    background: linear-gradient(0deg, #161616 25.17%, #313131 57.34%);
+}
+
+.text-darkGrad{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: linear-gradient(312.98deg, #161616 25.17%, #0F0F0F 57.34%);
+}
+
+.bg-gradient-gray {
+    background: rgb(77,77,77);
+    background: linear-gradient(180deg, rgba(77,77,77,1) 0%, rgba(49,49,49,1) 100%);
+}
+
+.text-gradient-orange {
+    background: -webkit-linear-gradient(#FF834F, #FF5E11);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input[type="text"],input[type="email"]{
+    border-radius: 5px;
+    background-color:#313131;
+    height:30px;margin-top: 10px;
+    width:100%;
+    color: #FFFFFF;
+    padding:10px 5px;
+}
+
+input[type="email"]:active,input[type="email"]:focus, input[type="email"]:valid{
+    background-color:#313131;
+}
+
+.textareaStyle{
+    border-radius: 5px;
+    background-color:#313131 ;
+    color: #FFFFFF;
+    margin-top: 10px;
+    width:100%;
+}

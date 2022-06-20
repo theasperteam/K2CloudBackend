@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K2Cloud Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style
+      type="text/tailwindcss"
+      href="./assets/stylesheet/tailwind.css"
+    ></style>
+    <link rel="stylesheet" href="./assets/stylesheet/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <!-- Link to the file hosted on your server, -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll CSS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- complete page container -->
+
+    <div class="landing">
+      <div class="container max-w-7xl mx-auto h-screen flex flex-col">
+        <!-- Navbar -->
+        <nav class="border-gray-200 px-2 sm:px-4 py-4 rounded">
+          <div
+            class="container flex flex-wrap justify-between items-center mx-auto"
+          >
+            <a href="index.html" class="flex items-center">
+              <img
+                src="./assets/images/favicon/android-chrome-512x512.png"
+                class="mr-3 h-6 sm:h-9"
+                alt="Flowbite Logo"
+              />
+              <span
+                class="self-center text-xl font-semibold whitespace-nowrap dark:text-headingColor"
+                >K2Cloud Engineering</span
+              >
+            </a>
+            <button
+              data-collapse-toggle="mobile-menu"
+              type="button"
+              class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+              <ul
+                class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:items-center"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="block py-2 pr-4 pl-3 text-orangeGradient2 md:p-0 font-semibold"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                    >Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                    >Solution</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="team.html"
+                    class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                    >Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="block py-2 pr-4 pl-3 text-white md:p-0"
+                  >
+                    <button
+                      class="inline-flex text-white bg-orangeGrad border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-md md:ml-4"
+                    >
+                      Contact Us
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Landing  -->
+
+        <section class="text-gray-600 body-font self-center my-auto">
+          <div
+            class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center md:flex-row"
+          >
+            <div
+              class="md:w-3/5 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left text-center mb-16 md:mb-0 items-center md:order-1 order-2"
+              data-aos="fade-up"
+            >
+              <h1
+                class="title-font md:text-5xl text-3xl mb-4 font-bold text-headingColor"
+              >
+                Digital
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2"
+                  >Transformation</span
+                >
+                <br class="hidden lg:inline-block" />made easy
+              </h1>
+              <p class="mb-8 leading-relaxed text-textColor">
+                Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+                air plant cold-pressed tacos poke beard tote bag. Heirloom echo
+                park mlkshk tote bag selvage hot chicken authentic tumeric
+                truffaut hexagon try-hard chambray.
+              </p>
+              <div class="flex justify-center">
+                <button
+                  class="inline-flex text-white bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-lg"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container max-w-7xl mx-auto">
+      <!-- glimpse -->
+
+      <section class="container mx-auto px-5 text-white body-font -mt-8 z-10">
+        <div
+          class="sm:h-48 h-auto bg-gray-500 rounded-lg flex flex-row flex-wrap p-12 justify-between items-center bg-gradient-gray"
+        >
+          <h1
+            class="sm:w-2/6 w-full sm:mb-0 mb-4 text-2xl text-headingColor font-bold"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h1>
+          <p
+            class="sm:w-3/6 w-full font-normal text-textColor sm:text-left text-center"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid,
+            mollitia, aliquam dolores quam similique vero nesciunt odio illo
+            repudiandae libero atque, dicta nisi velit.
+          </p>
+          <div
+            class="sm:w-1/6 w-full flex justify-center items-center sm:ml-0 mx-auto sm:my-0 mt-8"
+          >
+          <a href="./services.html">
+            <button
+              class="rounded-full bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 px-8 py-6 hover:scale-95 duration-300"
+            >
+              <i class="fa-solid fa-angle-right text-xl"></i>
+            </button>
+          </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- why choose us -->
+
+      <section class="container mx-auto my-8 text-gray-600 body-font">
+        <div
+          class="flex flex-col justify-center py-8 items-center"
+          data-aos="fade-up"
+        >
+          <p class="md:text-4xl text-2xl font-bold text-headingColor">
+            Why choose us
+          </p>
+          <p class="my-4 md:w-1/2 w-5/6 text-center text-textColor">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            perspiciatis quod sed quibusdam perferendis sunt ad molestiae vel.
+          </p>
+        </div>
+
+        <!-- main section -->
+
+        <div
+          class="h-auto grid md:grid-cols-3 grid-cols-2 px-5 content-center mx-auto justify-around"
+        >
+          <div class="grid grid-rows-2 content-around">
+            <div
+              class="flex flex-col justify-center mx-auto w-2/3 md:text-right text-center md:my-0 my-4"
+              data-aos="fade-up"
+            >
+              <i
+                class="fa-solid fa-globe text-5xl my-4 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+              ></i>
+              <p class="sm:text-xl text-lg font-semibold text-textColor">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center mx-auto w-2/3 md:text-right text-center md:my-0 my-4"
+              data-aos="fade-up"
+            >
+              <i
+                class="fa-solid fa-file-shield text-5xl my-4 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+              ></i>
+              <p class="sm:text-xl text-lg font-semibold text-textColor">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="md:block hidden p-8">
+            <img
+              class="object-cover object-center rounded"
+              alt="hero"
+              src="assets/images/Images/why.jpg"
+            />
+          </div>
+          <div class="grid grid-rows-2 content-around">
+            <div
+              class="flex flex-col justify-self-end w-2/3 md:text-left text-center justify-center mx-auto md:my-0 my-4"
+              data-aos="fade-up"
+            >
+              <i
+                class="fa-solid fa-list-check text-5xl my-4 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+              ></i>
+              <p class="sm:text-xl text-lg font-semibold text-textColor">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-self-end w-2/3 md:text-left text-center justify-center mx-auto md:my-0 my-4"
+              data-aos="fade-up"
+            >
+              <i
+                class="fa-solid fa-microchip text-5xl my-4 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+              ></i>
+              <p class="sm:text-xl text-lg font-semibold text-textColor">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- content section 1 -->
+
+      <section class="text-gray-600 body-font">
+        <div
+          class="container mx-auto flex px-5 pt-16 pb-8 md:flex-row flex-col items-center"
+        >
+          <div
+            class="lg:flex-grow md:w-1/3 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center order-2"
+            data-aos="fade-up"
+          >
+            <h1
+              class="title-font sm:text-4xl text-2xl my-2 font-bold text-headingColor"
+            >
+              For redirecting to services page
+            </h1>
+            <p class="my-2 leading-relaxed text-textColor">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint dignissimos fugiat saepe voluptatibus veniam necessitatibus blanditiis quisquam recusandae, minima reiciendis sed ipsam cupiditate vitae itaque quis maxime suscipit eligendi iure beatae minus ut! Ipsum nesciunt, delectus ratione iure ipsa ullam, recusandae ab dolores, quis aperiam aliquid? Aut, enim.
+            </p>
+            <div class="flex justify-center my-4">
+              <a href="./services.html">
+              <button
+                class="inline-flex text-white bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-md"
+              >
+                Learn More
+              </button>
+            </a>
+            </div>
+          </div>
+          <div
+            class="lg:max-w-lg lg:w-full md:w-2/3 w-5/6 order-1 my-4"
+            data-aos="fade-up"
+          >
+            <img
+              class="object-cover object-center rounded-md"
+              alt="hero"
+              src="assets/images/Images/service2.jpg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- content section 2 -->
+
+      <section class="text-gray-600 body-font">
+        <div
+          class="container mx-auto flex px-5 pt-8 pb-16 md:flex-row flex-col items-center"
+        >
+          <div
+            class="lg:flex-grow md:w-1/3 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center md:order-1 order-2"
+            data-aos="fade-up"
+          >
+            <h1
+              class="title-font sm:text-4xl text-2xl my-2 font-bold text-headingColor"
+            >
+              For redirecting to about page
+            </h1>
+            <p class="my-2 leading-relaxed text-textColor">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque laborum doloremque quo unde porro reprehenderit blanditiis, omnis, qui iure amet minima placeat quibusdam. Est quisquam nesciunt consectetur mollitia aliquam fugit libero corporis nulla, voluptatum earum, ipsum totam numquam vero, voluptas dolor quaerat itaque eveniet! Assumenda porro sed expedita!
+            </p>
+            <div class="flex justify-center my-4">
+              <a href="./about.html">
+              <button
+                class="inline-flex text-white bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-md"
+              >
+                Learn More
+              </button>
+            </a>
+            </div>
+          </div>
+          <div
+            class="lg:max-w-lg lg:w-full md:w-2/3 w-5/6 md:order-2 order-1 my-4"
+            data-aos="fade-up"
+          >
+            <img
+              class="object-cover object-center rounded-md"
+              alt="hero"
+              src="assets/images/Images/g4.jpg"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- testimonials  -->
+
+    <section
+      id="image-carousel"
+      class="splide my-20 justify-center container mx-auto max-w-7xl"
+      aria-label="Beautiful Images"
+    >
+      <div
+        class="flex flex-col justify-center mb-8 items-center"
+        data-aos="fade-up"
+      >
+        <p class="md:text-4xl text-2xl font-bold text-headingColor">
+          Testimonials
+        </p>
+        <p class="my-4 md:w-1/2 w-5/6 text-center text-textColor">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+          perspiciatis quod sed quibusdam perferendis sunt ad molestiae vel.
+        </p>
+      </div>
+
+      <div class="splide__track" data-aos="fade-up">
+        <div
+          class="splide__arrows flex flex-row items-center text-headingColor"
+        >
+          <button
+            class="mx-4 splide__arrow splide__arrow--prev bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 px-6 py-6 opacity-100"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button
+            class="mx-4 splide__arrow splide__arrow--next bg-gradient-to-r from-orangeGradient2 to-orangeGradient1 px-6 py-6 opacity-100"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="p-4 w-full">
+              <div class="h-full bg-gradient-gray p-8 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p class="leading-relaxed mb-6 text-textColor">
+                  Synth chartreuse iPhone lomo cray raw denim brunch everyday
+                  carry neutra before they sold out fixie 90's microdosing.
+                  Tacos pinterest fanny pack venmo, post-ironic heirloom
+                  try-hard pabst authentic iceland.
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="https://dummyimage.com/106x106"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-textColor"
+                      >Holden Caulfield</span
+                    >
+                    <span class="text-orangeGrad text-sm">UI DEVELOPER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="p-4 w-full">
+              <div class="h-full bg-gradient-gray p-8 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p class="leading-relaxed mb-6 text-textColor">
+                  Synth chartreuse iPhone lomo cray raw denim brunch everyday
+                  carry neutra before they sold out fixie 90's microdosing.
+                  Tacos pinterest fanny pack venmo, post-ironic heirloom
+                  try-hard pabst authentic iceland.
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="https://dummyimage.com/106x106"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-textColor"
+                      >Holden Caulfield</span
+                    >
+                    <span class="text-orangeGrad text-sm">UI DEVELOPER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="p-4 w-full">
+              <div class="h-full bg-gradient-gray p-8 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p class="leading-relaxed mb-6 text-textColor">
+                  Synth chartreuse iPhone lomo cray raw denim brunch everyday
+                  carry neutra before they sold out fixie 90's microdosing.
+                  Tacos pinterest fanny pack venmo, post-ironic heirloom
+                  try-hard pabst authentic iceland.
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="https://dummyimage.com/106x106"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-textColor"
+                      >Holden Caulfield</span
+                    >
+                    <span class="text-orangeGrad text-sm">UI DEVELOPER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="p-4 w-full">
+              <div class="h-full bg-gradient-gray p-8 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p class="leading-relaxed mb-6 text-textColor">
+                  Synth chartreuse iPhone lomo cray raw denim brunch everyday
+                  carry neutra before they sold out fixie 90's microdosing.
+                  Tacos pinterest fanny pack venmo, post-ironic heirloom
+                  try-hard pabst authentic iceland.
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="https://dummyimage.com/106x106"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-textColor"
+                      >Holden Caulfield</span
+                    >
+                    <span class="text-orangeGrad text-sm">UI DEVELOPER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="p-4 w-full">
+              <div class="h-full bg-gradient-gray p-8 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p class="leading-relaxed mb-6 text-textColor">
+                  Synth chartreuse iPhone lomo cray raw denim brunch everyday
+                  carry neutra before they sold out fixie 90's microdosing.
+                  Tacos pinterest fanny pack venmo, post-ironic heirloom
+                  try-hard pabst authentic iceland.
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="https://dummyimage.com/106x106"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-textColor"
+                      >Holden Caulfield</span
+                    >
+                    <span class="text-orangeGrad text-sm">UI DEVELOPER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="body-font bg-gray2">
+      <div
+        class="container max-w-7xl px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="md:w-1/4 w-2/3 md:mx-0 mx-auto md:mb-0 mb-8 text-center md:text-left"
+        >
+          <a
+            href="index.html"
+            class="flex title-font font-medium items-center md:justify-start justify-center text-headingColor mb-4"
+          >
+            <img
+              src="./assets/images/favicon/android-chrome-512x512.png"
+              class="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <p class="mt-2 text-sm text-textColor">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis voluptatibus excepturi facere!
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto items-center text-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Company
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./team.html"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./contact.html"
+                  >Contact Us</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto text-center items-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Services
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#roles"
+                  >Roles as Service</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#build"
+                  >It Applications</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#products"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#run"
+                  >Run and Operate</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#transformation"
+                  >Transformations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#operation"
+                  >Operations</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full text-center md:text-left items-center px-4"
+        >
+          <div class="items-start">
+            <h2
+              class="lg:w-full md:w-full w-2/3 md:mx-0 mx-auto title-font font-medium text-headingColor text-lg mb-3 text-center md:text-left"
+            >
+              Get connected with us and digitally transformed
+            </h2>
+            <span class="inline-flex text-xl my-2 md:mx-0 mx-auto">
+              <i
+                class="fa-brands fa-twitter mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin-in mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray2">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-textColor text-sm text-center mx-auto">
+            © 2020 K2Cloud —
+            <a
+              href="https://twitter.com/knyttneve"
+              rel="noopener noreferrer"
+              class="text-orangeGradient1"
+              target="_blank"
+              >@theasperteam</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/script/tailwind.config.js"></script>
+
+    <!-- Animate on Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- javascript for splide carousel -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide(".splide", {
+          perPage: 3,
+          pagination: false,
+          type: "loop",
+          focus: "center",
+          breakpoints: {
+            400: {
+              perPage: 1,
+            },
+            640: {
+              perPage: 1,
+            },
+            960: {
+              perPage: 2,
+            },
+            1440: {
+              perPage: 2,
+            },
+          },
+        }).mount();
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

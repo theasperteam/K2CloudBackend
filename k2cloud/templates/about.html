@@ -1,0 +1,539 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'stylesheet/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll CSS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>K2Cloud | About</title>
+  </head>
+
+  <body>
+    <div class="container mx-auto max-w-7xl">
+      <!-- Navbar -->
+
+      <!-- Navbar -->
+      <nav class="border-gray-200 px-2 sm:px-4 py-4 rounded">
+        <div
+          class="container flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="{% url 'Home' %}" class="flex items-center">
+            <img
+              src="{% static 'images/favicon/android-chrome-512x512.png' %}"
+              class="mr-3 h-6 sm:h-9"
+              alt="Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-headingColor"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="mobile-menu"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <ul
+              class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:items-center"
+            >
+              <li>
+                <a
+                  href="{% url 'Home' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'About' %}"
+                  class="block py-2 pr-4 pl-3 text-orangeGradient2 md:p-0 font-semibold"
+                  >Vision</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Service' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Solution</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Team' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Contact' %}"
+                  class="block py-2 pr-4 pl-3 text-white md:p-0"
+                >
+                  <button
+                    class="inline-flex text-white bg-orangeGrad border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-md md:ml-4"
+                  >
+                    Contact Us
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar -->
+
+      <!-- Hero -->
+      <div
+        class="text-center max-w-5xl px-5 md:px-0 text-md min-h-[65vh] flex flex-col items-center justify-center mx-auto"
+        data-aos="fade-up"
+      >
+        <img
+          src="{% static 'images/favicon/android-chrome-192x192.png' %}"
+          class="md:h-14 h-10"
+          alt="logoFav"
+        />
+        <p
+          class="md:text-5xl text-3xl font-bold md:my-8 my-4 text-headingColor"
+        >
+          More About<span class="text-orangeGrad"> K2 Cloud</span>
+        </p>
+        <p class="text-textColor">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ac
+          aliquam viverra tellus ut et. Egestas nibh et sodales pellentesque
+          commodo pharetra, mauris, habitant. Metus tortor sit est tristique
+          massa mattis sed turpis posuere..Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Eget ac aliquam viverra tellus ut et.
+          Egestas nibh et sodales pellentesque commodo pharetra, mauris,
+          habitant.
+        </p>
+      </div>
+      <!-- Hero -->
+
+      <!-- Numbers -->
+      <div
+        class="bg-gradient-gray flex container mx-auto justify-around md:w-[80 vw] flex-wrap text-center px-6 py-12 md:text-lg text-md mb-10 font-semibold gap-y-5 gap-x-5 rounded-md"
+      >
+        <div>
+          <p class="text-orangeGrad font-bold text-lg md:text-2xl value" last="20">0</p>
+          <p class="text-textColor">Years of Experience</p>
+        </div>
+        <div>
+          <p class="text-orangeGrad font-bold text-lg md:text-2xl value" last="10000">0</p>
+          <p class="text-textColor">Business Partners</p>
+        </div>
+        <div>
+          <p class="text-orangeGrad font-bold text-lg md:text-2xl value" last="5000">0</p>
+          <p class="text-textColor">Products Installed</p>
+        </div>
+        <div>
+          <p class="text-orangeGrad font-bold text-lg md:text-2xl value" last="30">0</p>
+          <p class="text-textColor">Countries Worldwide</p>
+        </div>
+      </div>
+      <!-- Numbers -->
+
+      <!-- Mission -->
+      <div
+        class="flex max-w-7xl container mx-auto my-16 py-4 md:py-16 items-center md:text-left text-center md:flex-row flex-col"
+      >
+        <div class="md:w-1/2 w-full md:order-1 order-2" data-aos="fade-up">
+          <p class="font-bold text-4xl mb-6 text-headingColor">Our Mission</p>
+          <div class="text-md md:text-lg px-5 md:px-0">
+            <p class="mb-2 text-textColor">
+              Provide the highest quality technology-based services, in the most
+              cost-effective manner, to facilitate the customers mission as it
+              applies to the effeciency, management, teaching, learning,
+              innovation and scaling challenges.
+            </p>
+            <p class="text-textColor">
+              To meet this mission we will: Provide effective technology support
+              for audio/visual, computer, multimedia, voice, video, and web
+              based applications and services to all areas of the college.
+              video, and web based applications and services to all areas of the
+              college. video, and web based applications and services to all
+              areas of the college.
+            </p>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 w-full md:order-2 order-1" data-aos="fade-up">
+          <img
+            src="{% static 'images/Images/Our_mission2.jpg' %}"
+            alt="mission"
+            class="md:w-5/6 w-2/3 mb-8 md:mb-0 md:ml-auto mx-auto rounded-md"
+          />
+        </div>
+      </div>
+      <!-- Mission -->
+
+      <!-- Purpose And Core Values -->
+      <div
+        class="max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 gap-y-6 px-5 md:px-0"
+      >
+        <div
+          class="border-2 border-gray1 hover:border-orangeGradient2 duration-300 ease-in-out rounded-md flex space-x-3 text-xl p-3 items-center"
+          data-aos="fade-up"
+        >
+          <i
+            class="fa-solid fa-globe text-2xl m-0.5 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+          ></i>
+          <p class="text-headingColor">Excellence And Leadership</p>
+        </div>
+        <div
+          class="border-2 border-gray1 hover:border-orangeGradient2 duration-300 ease-in-out rounded-md flex space-x-3 text-xl p-3 items-center"
+          data-aos="fade-up"
+        >
+          <i
+            class="fa-solid fa-globe text-2xl m-0.5 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+          ></i>
+          <p class="text-headingColor">Excellence And Leadership</p>
+        </div>
+        <div
+          class="border-2 border-gray1 hover:border-orangeGradient2 duration-300 ease-in-out rounded-md flex space-x-3 text-xl p-3 items-center"
+          data-aos="fade-up"
+        >
+          <i
+            class="fa-solid fa-globe text-2xl m-0.5 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+          ></i>
+          <p class="text-headingColor">Excellence And Leadership</p>
+        </div>
+        <div
+          class="border-2 border-gray1 hover:border-orangeGradient2 duration-300 ease-in-out rounded-md flex space-x-3 text-xl p-3 items-center"
+          data-aos="fade-up"
+        >
+          <i
+            class="fa-solid fa-globe text-2xl m-0.5 text-transparent bg-clip-text bg-gradient-to-b from-orangeGradient1 to-orangeGradient2"
+          ></i>
+          <p class="text-headingColor">Excellence And Leadership</p>
+        </div>
+      </div>
+      <!-- Purpose And Core Values -->
+
+      <!-- Purpose -->
+      <div
+        class="flex max-w-7xl container mx-auto my-16 py-4 md:py-16 items-center md:text-left text-center md:flex-row flex-col items-center"
+      >
+        <div class="md:w-1/2 w-full" data-aos="fade-up">
+          <img
+            src="{% static 'images/Images/Values.jpg' %}"
+            alt="mission"
+            class="md:w-5/6 w-2/3 mb-8 md:mb-0 mx-auto md:mx-0 rounded-md"
+          />
+        </div>
+        <div class="md:w-1/2 w-full px-5 md:px-0" data-aos="fade-up">
+          <p class="font-bold text-4xl mb-6 text-headingColor">
+            Purpose And Core Values
+          </p>
+          <div class="text-md md:text-lg space-y-5">
+            <p class="mb-2 text-textColor">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Pharetra urna
+              etiam elit lorem. Id aliquet sed pellentesque commodo posuere.
+            </p>
+            <p class="text-textColor">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Pharetra urna
+              etiam elit lorem. Id aliquet sed pellentesque commodo posuere.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Purpose -->
+
+      <!-- Partners -->
+      <div
+        class="mx-auto flex md:flex-row flex-col justify-between items-center my-24 px-5 md:px-0"
+        data-aos="fade-up"
+      >
+        <div
+          class="text-4xl md:pr-24 pr-0 border-r-0 md:w-auto w-full md:border-r-2 border-slate-400 text-headingColor md:text-start text-center"
+        >
+          Our
+          <span class="md:block inline-block font-bold text-orangeGrad"
+            >Partners</span
+          >
+        </div>
+        <div
+          class="grid md:grid-cols-4 grid-cols-2 md:w-auto w-full md:py-0 py-10 md:mx-0 mx-auto space-y-3"
+        >
+          <img
+            src="{% static 'images/Illustrations/Partner (1).png' %}"
+            alt="P1"
+            class="h-5/6 md:mx-auto"
+          />
+          <img
+            src="{% static 'images/Illustrations/Partner (2).png' %}"
+            alt="P1"
+            class="h-5/6 md:mx-auto"
+          />
+          <img
+            src="{% static 'images/Illustrations/Partner (3).png' %}"
+            alt="P1"
+            class="h-5/6 md:mx-auto"
+          />
+          <img
+            src="{% static 'images/Illustrations/Partner (4).png' %}"
+            alt="P1"
+            class="h-5/6 md:mx-auto"
+          />
+        </div>
+      </div>
+      <!-- Partners -->
+
+      <!-- CTA -->
+      <div
+        class="bg-gradient-gray my-10 p-6 py-10 flex justify-around rounded-md md:flex-row flex-col"
+        data-aos="fade-up"
+      >
+        <img
+          src="{% static 'images/Illustrations/Market launch-pana.png' %}"
+          class="h-32 md:w-auto w-auto md:mx-2 mx-auto md:my-4 my-auto animate-bounce-slow"
+        />
+        <div class="md:text-start text-center w-2/3 mx-auto md:px-5 px-0">
+          <p class="font-bold text-2xl md:text-3xl text-headingColor my-2">
+            Make Your Business Fly With us
+          </p>
+          <p class="text-textColor">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo totam sapiente beatae quibusdam iure placeat, nam rerum iste.
+          </p>
+          <a href="{% url 'Contact' %}">
+          <button
+            class="inline-flex text-white bg-orangeGrad border-0 my-4 py-2 px-6 hover:scale-95 duration-300 rounded text-md"
+          >
+            Get Started
+          </button>
+        </a>
+        </div>
+      </div>
+      <!-- CTA -->
+    </div>
+    <!-- footer -->
+
+    <footer class="body-font bg-gray2">
+      <div
+        class="container max-w-7xl px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="md:w-1/4 w-2/3 md:mx-0 mx-auto md:mb-0 mb-8 text-center md:text-left"
+        >
+          <a
+            href="{% url 'Home' %}"
+            class="flex title-font font-medium items-center md:justify-start justify-center text-headingColor mb-4"
+          >
+            <img
+              src="{% static 'images/favicon/android-chrome-512x512.png' %}"
+              class="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <p class="mt-2 text-sm text-textColor">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis voluptatibus excepturi facere!
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto items-center text-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Company
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Home' %}"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'About' %}"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Team' %}"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Contact' %}"
+                  >Contact Us</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto text-center items-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Services
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#roles"
+                  >Roles as Service</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#build"
+                  >It Applications</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#products"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#run"
+                  >Run and Operate</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#transformation"
+                  >Transformations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#operation"
+                  >Operations</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full text-center md:text-left items-center px-4"
+        >
+          <div class="items-start">
+            <h2
+              class="lg:w-full md:w-full w-2/3 md:mx-0 mx-auto title-font font-medium text-headingColor text-lg mb-3 text-center md:text-left"
+            >
+              Get connected with us and digitally transformed
+            </h2>
+            <span class="inline-flex text-xl my-2 md:mx-0 mx-auto">
+              <i
+                class="fa-brands fa-twitter mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin-in mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray2">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-textColor text-sm text-center mx-auto">
+            © 2022 K2Cloud —
+            <a
+              href="https://www.instagram.com/theasperteam/?hl=en"
+              rel="noopener noreferrer"
+              class="text-orangeGradient1"
+              target="_blank"
+              >@theasperteam</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+
+    <script src="{% static 'script/tailwind.config.js' %}"></script>
+    
+    <!-- operation toggle js -->
+    <script src="{% static 'script/toggle.js' %}"></script>
+
+    <!-- Animate on Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

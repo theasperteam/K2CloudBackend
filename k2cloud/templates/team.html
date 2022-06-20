@@ -1,0 +1,506 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team | K2Cloud</title>
+
+    <!-- essential links -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <style
+      type="text/tailwindcss"
+      href="./assets/stylesheet/tailwind.css"
+    ></style> -->
+    <link rel="stylesheet" href="{% static 'stylesheet/style.css' %}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll CSS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- complete page container -->
+
+    <div class="container max-w-7xl mx-auto">
+      <!-- Navbar -->
+      <nav class="border-gray-200 px-2 sm:px-4 py-4 rounded">
+        <div
+          class="container flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="{% url 'Home' %}" class="flex items-center">
+            <img
+              src="{% static 'images/favicon/android-chrome-512x512.png' %}"
+              class="mr-3 h-6 sm:h-9"
+              alt="Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-headingColor"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="mobile-menu"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <ul
+              class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:items-center"
+            >
+              <li>
+                <a
+                  href="{% url 'Home' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'About' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Vision</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Service' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Solution</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Team' %}"
+                  class="block py-2 pr-4 pl-3 text-orangeGradient2 md:p-0 font-semibold"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Contact' %}"
+                  class="block py-2 pr-4 pl-3 text-white md:p-0"
+                >
+                  <button
+                    class="inline-flex text-white bg-orangeGrad border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-md md:ml-4"
+                  >
+                    Contact Us
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main team section -->
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-8" data-aos="fade-up">
+            <h1
+              class="md:text-5xl text-3xl font-bold title-font mb-4 text-headingColor"
+            >
+              Our
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2"
+                >Team</span
+              >
+            </h1>
+            <p class="lg:w-2/4 mx-auto leading-relaxed text-textColor">
+              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+              gentrify, subway tile poke farm-to-table. Franzen you probably
+              haven't heard of them.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center">
+            <div class="p-8 lg:w-1/3 md:w-1/2" data-aos="fade-up">
+              <div class="h-full flex flex-col items-center text-center">
+                <img
+                  alt="team"
+                  class="flex-shrink-0 rounded-lg w-full h-64 object-cover object-center mb-4"
+                  src="{% static 'images/Images/build.jpg' %}"
+                />
+                <div class="w-full">
+                  <h2
+                    class="title-font font-bold sm:text-2xl text-lg text-headingColor my-2"
+                  >
+                    Kevin Brannigan
+                  </h2>
+                  <h3
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 sm:text-lg text-md font-medium mb-3"
+                  >
+                    UI Developer
+                  </h3>
+                  <p class="mb-4 text-textColor">
+                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                    pack vaporware.
+                  </p>
+                  <span class="inline-flex text-xl my-2">
+                    <i
+                      class="fa-brands fa-twitter mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 lg:w-1/3 md:w-1/2" data-aos="fade-up">
+              <div class="h-full flex flex-col items-center text-center">
+                <img
+                  alt="team"
+                  class="flex-shrink-0 rounded-lg w-full h-64 object-cover object-center mb-4"
+                  src="{% static 'images/Images/build.jpg' %}"
+                />
+                <div class="w-full">
+                  <h2
+                    class="title-font font-bold sm:text-2xl text-lg text-headingColor my-2"
+                  >
+                    Kevin Brannigan
+                  </h2>
+                  <h3
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 sm:text-lg text-md font-medium mb-3"
+                  >
+                    UI Developer
+                  </h3>
+                  <p class="mb-4 text-textColor">
+                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                    pack vaporware.
+                  </p>
+                  <span class="inline-flex text-xl my-2">
+                    <i
+                      class="fa-brands fa-twitter mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 lg:w-1/3 md:w-1/2" data-aos="fade-up">
+              <div class="h-full flex flex-col items-center text-center">
+                <img
+                  alt="team"
+                  class="flex-shrink-0 rounded-lg w-full h-64 object-cover object-center mb-4"
+                  src=".{% static 'images/Images/build.jpg' %}"
+                />
+                <div class="w-full">
+                  <h2
+                    class="title-font font-bold sm:text-2xl text-lg text-headingColor my-2"
+                  >
+                    Kevin Brannigan
+                  </h2>
+                  <h3
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 sm:text-lg text-md font-medium mb-3"
+                  >
+                    UI Developer
+                  </h3>
+                  <p class="mb-4 text-textColor">
+                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                    pack vaporware.
+                  </p>
+                  <span class="inline-flex text-xl my-2">
+                    <i
+                      class="fa-brands fa-twitter mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 lg:w-1/3 md:w-1/2" data-aos="fade-up">
+              <div class="h-full flex flex-col items-center text-center">
+                <img
+                  alt="team"
+                  class="flex-shrink-0 rounded-lg w-full h-64 object-cover object-center mb-4"
+                  src="{% static 'images/Images/build.jpg' %}"
+                />
+                <div class="w-full">
+                  <h2
+                    class="title-font font-bold sm:text-2xl text-lg text-headingColor my-2"
+                  >
+                    Kevin Brannigan
+                  </h2>
+                  <h3
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 sm:text-lg text-md font-medium mb-3"
+                  >
+                    UI Developer
+                  </h3>
+                  <p class="mb-4 text-textColor">
+                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                    pack vaporware.
+                  </p>
+                  <span class="inline-flex text-xl my-2">
+                    <i
+                      class="fa-brands fa-twitter mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 lg:w-1/3 md:w-1/2" data-aos="fade-up">
+              <div class="h-full flex flex-col items-center text-center">
+                <img
+                  alt="team"
+                  class="flex-shrink-0 rounded-lg w-full h-64 object-cover object-center mb-4"
+                  src="{% static 'images/Images/build.jpg' %}"
+                />
+                <div class="w-full">
+                  <h2
+                    class="title-font font-bold sm:text-2xl text-lg text-headingColor my-2"
+                  >
+                    Kevin Brannigan
+                  </h2>
+                  <h3
+                    class="text-orangeGradient1 sm:text-lg text-md font-medium mb-3"
+                  >
+                    UI Developer
+                  </h3>
+                  <p class="mb-4 text-textColor">
+                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                    pack vaporware.
+                  </p>
+                  <span class="inline-flex text-xl my-2">
+                    <i
+                      class="fa-brands fa-twitter mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in mx-2 hover:text-orangeGradient1 duration-300 ease-in-out"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="body-font bg-gray2">
+      <div
+        class="container max-w-7xl px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="md:w-1/4 w-2/3 md:mx-0 mx-auto md:mb-0 mb-8 text-center md:text-left"
+        >
+          <a
+            href="{% url 'Home' %}"
+            class="flex title-font font-medium items-center md:justify-start justify-center text-headingColor mb-4"
+          >
+            <img
+              src="{% static 'images/favicon/android-chrome-512x512.png' %}"
+              class="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <p class="mt-2 text-sm text-textColor">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis voluptatibus excepturi facere!
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto items-center text-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Company
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Home' %}"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'About' %}"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Team' %}"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Contact' %}"
+                  >Contact Us</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto text-center items-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Services
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#roles"
+                  >Roles as Service</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#build"
+                  >It Applications</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#products"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#run"
+                  >Run and Operate</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#transformation"
+                  >Transformations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#operation"
+                  >Operations</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full text-center md:text-left items-center px-4"
+        >
+          <div class="items-start">
+            <h2
+              class="lg:w-full md:w-full w-2/3 md:mx-0 mx-auto title-font font-medium text-headingColor text-lg mb-3 text-center md:text-left"
+            >
+              Get connected with us and digitally transformed
+            </h2>
+            <span class="inline-flex text-xl my-2 md:mx-0 mx-auto">
+              <i
+                class="fa-brands fa-twitter mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin-in mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray2">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-textColor text-sm text-center mx-auto">
+            © 2022 K2Cloud —
+            <a
+              href="https://www.instagram.com/theasperteam/?hl=en"
+              rel="noopener noreferrer"
+              class="text-orangeGradient1"
+              target="_blank"
+              >@theasperteam</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- tailwind config js -->
+    <script src="{% static 'script/tailwind.config.js' %}"></script>
+
+    <!-- Animate on Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

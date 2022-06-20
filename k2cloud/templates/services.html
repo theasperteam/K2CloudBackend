@@ -1,0 +1,963 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | K2Cloud</title>
+
+    <!-- essential links -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style
+      type="text/tailwindcss"
+      href="{% static 'stylesheet/tailwind.css' %}"
+    ></style>
+    <link rel="stylesheet" href="{% static 'stylesheet/style.css' %}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll CSS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- complete container -->
+
+    <div class="container max-w-7xl mx-auto">
+      <!-- Navbar -->
+      <nav class="border-gray-200 px-2 sm:px-4 py-4 rounded">
+        <div
+          class="container flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="{% url 'Home' %}" class="flex items-center">
+            <img
+              src="{% static 'images/favicon/android-chrome-512x512.png' %}"
+              class="mr-3 h-6 sm:h-9"
+              alt="Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-headingColor"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="mobile-menu"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <ul
+              class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:items-center"
+            >
+              <li>
+                <a
+                  href="{% url 'Home' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'About' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Vision</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Service' %}"
+                  class="block py-2 pr-4 pl-3 text-orangeGradient2 md:p-0 font-semibold"
+                  >Solution</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Team' %}"
+                  class="block py-2 pr-4 pl-3 text-headingColor hover:text-orangeGradient2 md:p-0 font-semibold"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'Contact' %}"
+                  class="block py-2 pr-4 pl-3 text-white md:p-0"
+                >
+                  <button
+                    class="inline-flex text-white bg-orangeGrad border-0 py-2 px-6 hover:scale-95 duration-300 rounded text-md md:ml-4"
+                  >
+                    Contact Us
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- landing -->
+
+      <section class="text-gray-600 body-font">
+        <div
+          class="container mx-auto flex px-4 py-28 items-center justify-center flex-col"
+        >
+          <p class="my-2 text-textColor font-semibold" data-aos="fade-up">
+            Get Started with K2Cloud
+          </p>
+          <div class="text-center lg:w-2/3 w-full" data-aos="fade-up">
+            <h1
+              class="title-font sm:text-5xl text-3xl mb-4 font-bold leading-loose text-headingColor"
+            >
+              Dive into the new age of
+              <br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2"
+                >Accerelated Analytics</span
+              >
+            </h1>
+            <p class="mb-4 leading-normal w-2/3 mx-auto text-textColor">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
+              dolorem aperiam nemo iste maiores fugiat, veniam quos, atque
+              dignissimos accusamus non laudantium quia omnis!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- glimpse -->
+
+      <section class="text-gray-600 body-font" data-aos="fade-up">
+        <div
+          class="container px-5 py-10 mx-auto bg-gray-600 rounded-lg bg-gradient-gray"
+        >
+          <div class="flex flex-wrap text-center">
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 value" last="2700"
+              >
+                0
+              </h2>
+              <p class="leading-relaxed text-textColor mt-2 font-semibold">
+                Users
+              </p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 value" last="1800"
+              >
+                0
+              </h2>
+              <p class="leading-relaxed text-textColor mt-2 font-semibold">
+                Subscribes
+              </p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 value" last="350"
+              >
+                0
+              </h2>
+              <p class="leading-relaxed text-textColor mt-2 font-semibold">
+                Downloads
+              </p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 value" last="400"
+              >
+                0
+              </h2>
+              <p class="leading-relaxed text-textColor mt-2 font-semibold">
+                Products
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roles as Services -->
+
+      <section class="text-gray-600 body-font" id="roles">
+        <div class="container px-5 pt-24 pb-16 mx-auto">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h1
+              class="sm:text-4xl text-2xl font-bold title-font text-headingColor"
+            >
+              Roles as a Service
+            </h1>
+            <p
+              class="text-textColor leading-relaxed xl:w-2/4 lg:w-2/4 mx-auto my-4"
+            >
+              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
+              mi pug.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap md:space-y-0 space-y-6" data-aos="fade-up">
+            <div
+              class="p-6 md:w-1/4 flex flex-col text-center items-center rounded-lg hover:shadow-lg hover:shadow-darkGradient2 hover:bg-darkGradient1 duration-300 ease-in-out"
+            >
+              <div
+                class="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 my-4"
+              >
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-headingColor text-xl title-font font-bold my-2">
+                  Infrastructure
+                </h2>
+                <p class="leading-normal text-textColor my-2">
+                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                  taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                  banh mi pug VHS try-hard.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="p-6 md:w-1/4 flex flex-col text-center items-center rounded-lg hover:shadow-lg hover:shadow-darkGradient2 hover:bg-darkGradient1 duration-300 ease-in-out"
+            >
+              <div
+                class="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 my-4"
+              >
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-headingColor text-xl title-font font-bold my-2">
+                  IT Security
+                </h2>
+                <p class="leading-normal text-textColor my-2">
+                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                  taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                  banh mi pug VHS try-hard.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="p-6 md:w-1/4 flex flex-col text-center items-center rounded-lg hover:shadow-lg hover:shadow-darkGradient2 hover:bg-darkGradient1 duration-300 ease-in-out"
+            >
+              <div
+                class="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 my-4"
+              >
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-headingColor text-xl title-font font-bold my-2">
+                  Operations
+                </h2>
+                <p class="leading-normal text-textColor my-2">
+                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                  taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                  banh mi pug VHS try-hard.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="p-6 md:w-1/4 flex flex-col text-center items-center rounded-lg hover:shadow-lg hover:shadow-darkGradient2 hover:bg-darkGradient1 duration-300 ease-in-out"
+            >
+              <div
+                class="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orangeGradient1 to-orangeGradient2 my-4"
+              >
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-headingColor text-xl title-font font-bold my-2">
+                  Management
+                </h2>
+                <p class="leading-normal text-textColor my-2">
+                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                  taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                  banh mi pug VHS try-hard.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- content section 1 -->
+
+      <section class="text-gray-600 body-font" id="build">
+        <div
+          class="container mx-auto flex px-5 pt-16 pb-4 flex-col items-center"
+        >
+          <div class="text-center mb-4" data-aos="fade-up">
+            <h1
+              class="sm:text-4xl text-2xl font-bold title-font text-headingColor my-2"
+            >
+              Build And Develop
+            </h1>
+            <p
+              class="leading-relaxed xl:w-3/4 lg:w-3/4 mx-auto text-textColor my-4"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+              odio cum nesciunt asperiores. Ducimus vel eius praesentium
+              placeat!
+            </p>
+          </div>
+
+          <div
+            class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center"
+          >
+            <div
+              class="md:w-2/3 w-5/6 md:pl-16 flex flex-col md:items-start md:text-left my-auto items-center text-center order-2"
+            >
+              <h1
+                class="title-font md:text-3xl text-2xl my-4 font-bold text-headingColor"
+                data-aos="fade-up"
+              >
+                IT Applications
+              </h1>
+              <p class="my-2 leading-relaxed text-textColor" data-aos="fade-up">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat, dolores perferendis voluptas quae nostrum atque aut
+                nesciunt sit alias officiis, reprehenderit aperiam ipsa,
+                quibusdam maiores porro nobis temporibus enim? Voluptates
+                accusantium voluptatibus odio quidem fuga magni quod quae sit
+                neque, beatae reiciendis debitis ullam dolores in iste! Dicta?
+              </p>
+              <p class="my-2 leading-relaxed text-textColor" data-aos="fade-up">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat, dolores perferendis voluptas quae nostrum atque aut
+                nesciunt sit alias officiis, reprehenderit aperiam ipsa,
+                quibusdam maiores porro nobis temporibus enim? Voluptates
+                accusantium voluptatibus odio quidem fuga magni quod quae sit
+                neque, beatae reiciendis debitis ullam dolores in iste! Dicta?
+              </p>
+            </div>
+            <div
+              class="lg:max-w-lg lg:w-full md:w-1/3 w-5/6 order-1 my-4"
+              data-aos="fade-up"
+            >
+              <img
+                class="object-cover object-center rounded"
+                alt="hero"
+                src="{% static 'images/Images/build.jpg' %}"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- content section 2 -->
+
+      <section class="text-gray-600 body-font" id="products">
+        <div
+          class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center"
+        >
+          <div
+            class="lg:flex-grow md:w-1/3 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mt-0 items-center text-center md:order-1 order-2"
+            data-aos="fade-up"
+          >
+            <h1
+              class="title-font md:text-3xl text-2xl my-4 font-bold text-headingColor"
+            >
+              Products
+            </h1>
+            <p class="my-2 leading-relaxed text-textColor">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              deserunt esse enim assumenda mollitia sequi ratione. Aut, iusto
+              quas aspernatur nobis maxime consequuntur blanditiis veniam
+              commodi ipsam voluptatibus odio veritatis officiis id doloribus
+              earum ipsa consectetur error corporis modi ex nulla, architecto
+              pariatur nesciunt? Possimus maiores nesciunt qui.
+            </p>
+            <p class="my-2 leading-relaxed text-textColor">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              deserunt esse enim assumenda mollitia sequi ratione. Aut, iusto
+              quas aspernatur nobis maxime consequuntur blanditiis veniam
+              commodi ipsam voluptatibus odio veritatis officiis id doloribus
+              earum ipsa consectetur error corporis modi ex nulla, architecto
+              pariatur nesciunt? Possimus maiores nesciunt qui.
+            </p>
+          </div>
+          <div
+            class="lg:max-w-lg lg:w-full md:w-2/3 w-5/6 md:order-2 order-1 my-4"
+            data-aos="fade-up"
+          >
+            <img
+              class="object-cover object-center rounded"
+              alt="hero"
+              src="{% static 'images/Images/g5.jpg' %}"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- content section 3 -->
+
+      <section class="text-gray-600 body-font" id="run">
+        <div
+          class="container mx-auto flex px-5 pt-16 pb-4 flex-col items-center"
+        >
+          <div
+            class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center"
+          >
+            <div
+              class="md:w-2/3 w-5/6 md:pl-16 flex flex-col md:items-start md:text-left my-auto items-center text-center order-2"
+            >
+              <h1
+                class="title-font md:text-3xl text-2xl my-4 font-bold text-headingColor"
+                data-aos="fade-up"
+              >
+                Run and Operate
+              </h1>
+              <p class="my-2 leading-relaxed text-textColor" data-aos="fade-up">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat, dolores perferendis voluptas quae nostrum atque aut
+                nesciunt sit alias officiis, reprehenderit aperiam ipsa,
+                quibusdam maiores porro nobis temporibus enim? Voluptates
+                accusantium voluptatibus odio quidem fuga magni quod quae sit
+                neque, beatae reiciendis debitis ullam dolores in iste! Dicta?
+              </p>
+              <ul
+                class="my-2 leading-relaxed text-textColor text-2xl"
+                data-aos="fade-up"
+              >
+                <li>
+                  <i class="fa-solid fa-microchip m-1 md:my-0 my-3 text-orangeGrad"></i>
+                  <span class="text-base">Lorem ipsum dolor sit.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-globe m-1 md:my-0 my-3 text-orangeGrad"></i>
+                  <span class="text-base">Lorem ipsum dolor sit.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-coins m-1 md:my-0 my-3 text-orangeGrad"></i>
+                  <span class="text-base">Lorem ipsum dolor sit.</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="lg:max-w-lg lg:w-full md:w-1/3 w-5/6 order-1 my-4"
+              data-aos="fade-up"
+            >
+              <img
+                class="object-cover object-center rounded"
+                alt="hero"
+                src="{% static 'images/Images/run.jpg' %}"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transformation -->
+
+      <section class="text-gray-600 body-font" id="transformation">
+        <div class="container px-5 pt-16 pb-4 mx-auto">
+          <div class="text-center mb-8" data-aos="fade-up">
+            <h1
+              class="sm:text-4xl text-2xl font-bold title-font text-headingColor my-2"
+            >
+              Transformations
+            </h1>
+            <p
+              class="text-base leading-normal xl:w-2/4 lg:w-3/4 mx-auto text-textColor my-4"
+            >
+              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
+              mi pug.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap my-16 mx-2" data-aos="fade-up">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div
+                class="bg-gradient-gray p-6 rounded-lg shadow hover:-translate-y-4 duration-500 ease-in-out"
+              >
+                <img
+                  class="h-40 rounded w-full object-cover object-center mb-4"
+                  src="{% static 'images/Images/Digital.jpg' %}"
+                  alt="content"
+                />
+                <h2
+                  class="md:text-xl text-lg text-headingColor font-bold title-font mb-4"
+                >
+                  Digital
+                </h2>
+                <p class="leading-normal text-textColor text-base">
+                  Fingerstache flexitarian street art 8-bit waistcoat.
+                  Distillery hexagon disrupt edison bulbche.
+                </p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
+              <div
+                class="bg-gradient-gray p-6 rounded-lg shadow hover:-translate-y-4 duration-500 ease-in-out"
+              >
+                <img
+                  class="h-40 rounded w-full object-cover object-center mb-4"
+                  src="{% static 'images/Images/Security.jpg' %}"
+                  alt="content"
+                />
+                <h2
+                  class="md:text-xl text-lg text-headingColor font-bold title-font mb-4"
+                >
+                  Cloud
+                </h2>
+                <p class="leading-normal text-textColor text-base">
+                  Fingerstache flexitarian street art 8-bit waistcoat.
+                  Distillery hexagon disrupt edison bulbche.
+                </p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
+              <div
+                class="bg-gradient-gray p-6 rounded-lg shadow hover:-translate-y-4 duration-500 ease-in-out"
+              >
+                <img
+                  class="h-40 rounded w-full object-cover object-center mb-4"
+                  src="{% static 'images/Images/Cloud.jpg' %}"
+                  alt="content"
+                />
+                <h2
+                  class="md:text-xl text-lg text-headingColor font-bold title-font mb-4"
+                >
+                  Security
+                </h2>
+                <p class="leading-normal text-textColor text-base">
+                  Fingerstache flexitarian street art 8-bit waistcoat.
+                  Distillery hexagon disrupt edison bulbche.
+                </p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
+              <div
+                class="bg-gradient-gray p-6 rounded-lg shadow hover:-translate-y-4 duration-500 ease-in-out"
+              >
+                <img
+                  class="h-40 rounded w-full object-cover object-center mb-4"
+                  src="{% static 'images/Images/Business.jpg' %}"
+                  alt="content"
+                />
+                <h2
+                  class="md:text-xl text-lg text-headingColor font-bold title-font mb-4"
+                >
+                  Business
+                </h2>
+                <p class="leading-normal text-textColor text-base">
+                  Fingerstache flexitarian street art 8-bit waistcoat.
+                  Distillery hexagon disrupt edison bulbche.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operations -->
+
+      <section class="text-gray-600 body-font" id="operation">
+        <div class="container mx-auto flex px-5 py-8 flex-col items-center">
+          <div class="text-center mb-8" data-aos="fade-up">
+            <h1
+              class="sm:text-4xl text-2xl font-bold title-font text-headingColor mb-4"
+            >
+              Operations
+            </h1>
+            <p
+              class="text-base leading-normal xl:w-2/3 lg:w-3/4 mx-auto text-textColor"
+            >
+              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
+              mi pug.
+            </p>
+          </div>
+
+          <!-- main section -->
+
+          <div
+            class="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center"
+            data-aos="fade-up"
+            id="tab-id"
+          >
+            <div
+              class="lg:flex-grow md:w-1/3 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center order-2"
+            >
+              <div class="w-5/6 mx-auto">
+                <ul
+                  class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                >
+                  <li class="mr-2">
+                    <a
+                      class="inline-block px-8 py-4 rounded-t-lg text-headingColor bg-gray2 hover:text-headingColor hover:bg-gray2"
+                      onclick="changeActiveTab(event, 'tab-test', 'tab-test-img')"
+                      >Penetration Testing</a
+                    >
+                  </li>
+                  <li class="mr-2">
+                    <a
+                      class="inline-block px-8 py-4 rounded-t-lg text-textColor hover:text-headingColor hover:bg-gray2"
+                      onclick="changeActiveTab(event, 'tab-soc', 'tab-soc-img')"
+                      >SOC</a
+                    >
+                  </li>
+                  <li class="mr-2">
+                    <a
+                      class="inline-block px-8 py-4 rounded-t-lg text-textColor hover:text-headingColor hover:bg-gray2"
+                      onclick="changeActiveTab(event, 'tab-iso', 'tab-iso-img')"
+                      >ISO Certification</a
+                    >
+                  </li>
+                </ul>
+
+                <div class="py-4">
+                  <div class="tab-content">
+
+                    <div class="block" id="tab-test">
+                      <p class="text-textColor my-2">
+                        Testing
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Cum ab tenetur architecto ex ea sequi rem expedita
+                        aperiam, voluptas recusandae obcaecati quos nam
+                        assumenda dolor ipsa praesentium voluptatibus fuga
+                        officia ipsum asperiores eum earum reprehenderit!
+                        Commodi provident voluptatum, quis mollitia quidem
+                        molestias nulla ullam. Corporis incidunt veniam
+                        excepturi officia, neque voluptate possimus quas
+                        perferendis nobis vero!
+                      </p>
+                      <p class="text-textColor my-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Blanditiis fugit placeat error distinctio ad ex dicta
+                        autem optio!
+                      </p>
+                      <ul class="my-4 leading-relaxed text-textColor text-2xl">
+                        <li>
+                          <i
+                            class="fa-solid fa-microchip m-1 text-orangeGrad"
+                          ></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-globe m-1 text-orangeGrad"></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-coins m-1 text-orangeGrad"></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="hidden" id="tab-soc">
+                      <p class="text-textColor my-2">
+                        Soc
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Cum ab tenetur architecto ex ea sequi rem expedita
+                        aperiam, voluptas recusandae obcaecati quos nam
+                        assumenda dolor ipsa praesentium voluptatibus fuga
+                        officia ipsum asperiores eum earum reprehenderit!
+                        Commodi provident voluptatum, quis mollitia quidem
+                        molestias nulla ullam. Corporis incidunt veniam
+                        excepturi officia, neque voluptate possimus quas
+                        perferendis nobis vero!
+                      </p>
+                      <p class="text-textColor my-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Blanditiis fugit placeat error distinctio ad ex dicta
+                        autem optio!
+                      </p>
+                      <ul class="my-4 leading-relaxed text-textColor text-2xl">
+                        <li>
+                          <i
+                            class="fa-solid fa-microchip md:my-0 my-3 m-1 text-orangeGrad"
+                          ></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-globe md:my-0 my-3 m-1 text-orangeGrad"></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-coins md:my-0 my-3 m-1 text-orangeGrad"></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="hidden" id="tab-iso">
+                      <p class="text-textColor my-2">
+                        Iso
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Cum ab tenetur architecto ex ea sequi rem expedita
+                        aperiam, voluptas recusandae obcaecati quos nam
+                        assumenda dolor ipsa praesentium voluptatibus fuga
+                        officia ipsum asperiores eum earum reprehenderit!
+                        Commodi provident voluptatum, quis mollitia quidem
+                        molestias nulla ullam. Corporis incidunt veniam
+                        excepturi officia, neque voluptate possimus quas
+                        perferendis nobis vero!
+                      </p>
+                      <p class="text-textColor my-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Blanditiis fugit placeat error distinctio ad ex dicta
+                        autem optio!
+                      </p>
+                      <ul class="my-4 leading-relaxed text-textColor text-2xl">
+                        <li>
+                          <i
+                            class="fa-solid fa-microchip m-1 text-orangeGrad"
+                          ></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-globe m-1 text-orangeGrad"></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-coins m-1 text-orangeGrad"></i>
+                          <span class="text-base">Lorem ipsum dolor sit.</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/3 w-2/4 order-1 my-4 tab-img">
+              <img
+                class="object-cover object-center rounded block"
+                id="tab-test-img"
+                alt="hero"
+                src="{% static 'images/Images/Operate2.png' %}"
+              />
+              <img
+                class="object-cover object-center rounded hidden"
+                id="tab-soc-img"
+                alt="hero"
+                src="{% static 'images/Images/Operate3.png' %}"
+              />
+              <img
+                class="object-cover object-center rounded hidden"
+                id="tab-iso-img"
+                alt="hero"
+                src="{% static 'images/Images/Operate4.png' %}"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="body-font bg-gray2">
+      <div
+        class="container max-w-7xl px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="md:w-1/4 w-2/3 md:mx-0 mx-auto md:mb-0 mb-8 text-center md:text-left"
+        >
+          <a
+            href="{% url 'Home' %}"
+            class="flex title-font font-medium items-center md:justify-start justify-center text-headingColor mb-4"
+          >
+            <img
+              src="{% static 'images/favicon/android-chrome-512x512.png' %}"
+              class="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >K2Cloud Engineering</span
+            >
+          </a>
+          <p class="mt-2 text-sm text-textColor">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis voluptatibus excepturi facere!
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto items-center text-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Company
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Home' %}"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'About' %}"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Team' %}"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Contact' %}"
+                  >Contact Us</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full px-auto text-center items-center md:text-left"
+        >
+          <div class="items-start">
+            <h2 class="title-font font-medium text-headingColor text-lg mb-3">
+              Services
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#roles"
+                  >Roles as Service</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#build"
+                  >It Applications</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="./services.html#products"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#run"
+                  >Run and Operate</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#transformation"
+                  >Transformations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-textColor hover:text-headingColor duration-200 ease-in-out"
+                  href="{% url 'Service' %}#operation"
+                  >Operations</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:w-1/4 md:w-1/4 w-full text-center md:text-left items-center px-4"
+        >
+          <div class="items-start">
+            <h2
+              class="lg:w-full md:w-full w-2/3 md:mx-0 mx-auto title-font font-medium text-headingColor text-lg mb-3 text-center md:text-left"
+            >
+              Get connected with us and digitally transformed
+            </h2>
+            <span class="inline-flex text-xl my-2 md:mx-0 mx-auto">
+              <i
+                class="fa-brands fa-twitter mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin-in mr-4 cursor-pointer text-textColor hover:text-orangeGradient1 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray2">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-textColor text-sm text-center mx-auto">
+            © 2022 K2Cloud —
+            <a
+              href="https://www.instagram.com/theasperteam/?hl=en"
+              rel="noopener noreferrer"
+              class="text-orangeGradient1"
+              target="_blank"
+              >@theasperteam</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- tailwind config js -->
+    <script src="{% static 'script/tailwind.config.js' %}"></script>
+
+    <!-- operation toggle js -->
+    <script src="{% static 'script/toggle.js' %}"></script>
+
+    <!-- Animate on Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

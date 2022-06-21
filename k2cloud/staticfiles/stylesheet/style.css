@@ -9,26 +9,17 @@ body{
     height: 100%;
     overflow-x : hidden;
     background: rgb(22,22,22);
-    /* color: #DFDFDF; */
 }
 
-/* a{
-    color: #f1f1f1;
-    text-decoration: none;
+ul{
+    list-style-type: disc;
 }
-
-a:hover{
-    color : #ff5e11;
-    text-decoration: none;
-} */
 
 .landing {
     background: url('../images/Images/lbw1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-blend-mode: overlay; */
-    /* linear-gradient(90deg, rgba(49,49,49,1) 40%, transparent 100%) */
 }
 
 .text-orangeGrad{
@@ -76,11 +67,10 @@ input[type="email"]:active,input[type="email"]:focus, input[type="email"]:valid{
     background-color:#313131;
 }
 
-
 .textareaStyle{
     border-radius: 5px;
-    color: #FFFFFF;
     background-color:#313131 ;
+    color: #FFFFFF;
     margin-top: 10px;
     width:100%;
 }
